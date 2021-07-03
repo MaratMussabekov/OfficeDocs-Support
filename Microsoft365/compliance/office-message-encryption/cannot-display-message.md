@@ -44,10 +44,12 @@ To resolve this problem, reset the MIME types that are associated with the defau
 
     ```powershell
     $owapolicy.AllowedMimeTypes.Remove("text/html")
+    $owapolicy.BlockedMimeTypes.Remove("text/html")
+    $owapolicy.ForceSaveMimeTypes.Add("text/html")
     ```
 
     ```powershell
-    Set-OwaMailboxPolicy -AllowedMimeTypes $owapolicy.AllowedMimeTypes -Identity $owapolicy.Identity
+    Set-OwaMailboxPolicy -AllowedMimeTypes $owapolicy.AllowedMimeTypes -BlockedMimeTypes $owapolicy.BlockedMimeTypes -ForceSaveMimeTypes $owapolicy.ForceSaveMimeTypes -Identity $owapolicy.Identity
     ```
 
     > [!NOTE]
