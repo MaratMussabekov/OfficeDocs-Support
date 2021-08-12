@@ -83,6 +83,8 @@ End Function
 
 ```
 
+[dbAttachSavePWD](./office/troubleshoot/access/tabledef-attributes-usage#tabledef-attributes) attribute in the above code allows saving username and password for the linked table with the connection information.
+
 To call the AttachDSNLessTable function, add code that is similar to one of the following code examples in the Auto-Exec macro or in the startup form Form_Open event:
 
 - When you use the Auto-Exec macro, call the AttachDSNLessTable function, and then pass parameters that are similar to the following from the RunCode action. 
